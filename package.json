@@ -6,7 +6,11 @@
   "scripts": {
     "ngrok": "ngrok http 3000",
     "dev": "npx nodemon app.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "yarn build && yarn serve",
+    "build": "npx tsc",
+    "serve": "nodemon --require dotenv/config dist/app.js"
+    // "serve": "node --require dotenv/config dist/app.js",
   },
   "author": "",
   "license": "ISC",
@@ -15,6 +19,15 @@
     "dotenv": "^16.0.3"
   },
   "devDependencies": {
-    "nodemon": "^2.0.21"
+    "@types/eslint": "^8.21.3",
+    "@types/node": "^18.15.5",
+    "@typescript-eslint/eslint-plugin": "^5.56.0",
+    "@typescript-eslint/parser": "^5.56.0",
+    "eslint": "^8.36.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "nodemon": "^2.0.21",
+    "prettier": "^2.8.6",
+    "typescript": "^5.0.2"
   }
 }

@@ -1,5 +1,5 @@
 require("dotenv").config();
-const { App } = require("@slack/bolt");
+import { App } from "@slack/bolt";
 
 // ボットトークンとソケットモードハンドラーを使ってアプリを初期化します
 const app = new App({
